@@ -1,0 +1,21 @@
+#This is raw AppleScript Code. Edit this per your user account, worker password, and directory of nheqminer on your mac. Uncomment Specified lines to make this script run.
+tell application "Terminal"
+	if not (exists window 1) then reopen
+	activate
+	delay 20
+end tell
+activate application "Terminal"
+tell application "System Events" to keystroke return
+tell application "System Events" to keystroke "cd /Applications/nheqminer-macos-v7"
+activate application "Terminal"
+tell application "System Events" to keystroke return
+#tell application "System Events" to keystroke "./nheqminer-gpu -l zec.suprnova.cc:2142 -u <Usernamehere> without quotes> -p password -cv 0 -cd 0"
+#uncomment the above line after entering your username to activate this script
+#example of the above line would look like:
+#tell application "System Events" to keystroke "./nheqminer-gpu -l zec.suprnova.cc:2142 -u Suprnovausername -p password -cv 0 -cd 0"
+tell application "System Events" to keystroke return
+tell application "Terminal"
+	activate
+	delay 4
+end tell
+tell application "System Events" to tell process "Terminal" to set visible to false
